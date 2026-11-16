@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml",
+    "redhat.vscode-openshift-connector",
+    "redhat.vscode-quarkus",
+    "redhat.vscode-microprofile",
+    "redhat.java",
+    "redhat.ansible",
+    "redhat.fabric8-analytics",
+    "vscjava.vscode-java-debug",
+    "vscjava.vscode-java-test",
+    "golang.go",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.pylint",
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "timonwong.shellcheck",
+    "DavidAnson.vscode-markdownlint",
+    "SonarSource.sonarlint-vscode"
+  ]
+}

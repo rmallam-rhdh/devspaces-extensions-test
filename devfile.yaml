@@ -1,0 +1,32 @@
+schemaVersion: 2.2.2
+metadata:
+  name: devspaces-extensions-test
+  displayName: Dev Spaces 24-Extensions Pre-Install Test
+  description: Sample workspace with 24 recommended VS Code extensions in .vscode/extensions.json for testing automatic background VSIX pre-installation.
+components:
+  - name: udi-tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel9:3.30
+      memoryRequest: 1Gi
+      memoryLimit: 4Gi
+      cpuRequest: 500m
+      cpuLimit: 2000m
+      mountSources: true
+      sourceMapping: /projects
+      env:
+        - name: PORT
+          value: "3000"
+      endpoints:
+        - name: http-app
+          targetPort: 3000
+          protocol: https
+          exposure: public
+commands:
+  - id: run-app
+    exec:
+      component: udi-tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: node server.js
+      group:
+        kind: run
+        isDefault: true
